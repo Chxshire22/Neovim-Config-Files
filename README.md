@@ -7,3 +7,9 @@ within that folder run:
 then install language servers with your package manager. For example if you want python, install jedi. 
 
 then within nvim, run `:CocInstall coc-python` for example if you want python autocomplete. `CTRL+Y` input will carry out the autocomplete. 
+
+Screenshots: 
+
+For startup screen
+![startupscreen](screenshots-nvim/startupscreen.png)
+
