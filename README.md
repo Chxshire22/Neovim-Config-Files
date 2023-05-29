@@ -10,6 +10,14 @@ then within nvim, run `:CocInstall coc-python` for example if you want python au
 
 Screenshots: 
 
-For startup screen
+Start-up screen
 ![startupscreen](screenshots-nvim/startupscreen.png)
 
+It has tabs, status bar, color schemes, etc. 
+![workflow](screenshots-nvim/working-has-tabs.png)
+
+File browser on side bar 
+![filebrowser](screenshots-nvim/nerdtree.png)
+
+Has autocompletion
+![autocomplete](screenshots-nvim/autocompletion.png)
