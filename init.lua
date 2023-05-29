@@ -67,6 +67,18 @@ packer.startup(function()
   })  end,
   requires = {'nvim-tree/nvim-web-devicons'}
 }
+use {
+  "AckslD/nvim-neoclip.lua",
+  requires = {
+    {'kkharji/sqlite.lua', module = 'sqlite'},
+    -- you'll need at least one of these
+    {'nvim-telescope/telescope.nvim'}
+    -- {'ibhagwan/fzf-lua'},
+  },
+  config = function()
+    require('neoclip').setup()
+  end,
+}
   end)
 
 -- Set colorscheme
@@ -104,6 +116,6 @@ vim.g.auto_save = 1
 vim.g.auto_save_silent = 1
 
 -- Linux clipboard settings (using xclip)
-vim.cmd('set clipboard^=unnamedplus')
+vim.cmd('set clipboard+=unnamedplus')
 
 
