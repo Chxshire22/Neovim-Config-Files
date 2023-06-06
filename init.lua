@@ -79,6 +79,7 @@ use {
     require('neoclip').setup()
   end,
 }
+	use 'L3MON4D3/LuaSnip'
   end)
 
 -- Set colorscheme
@@ -90,7 +91,7 @@ vim.api.nvim_set_keymap('n', '<C-f>', ':NERDTreeFocus<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-n>', ':NERDTree<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-t>', ':NERDTreeToggle<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-l>', ':call CocActionAsync("jumpDefinition")<CR>', { silent = true })
-vim.api.nvim_set_keymap('n', '<F8>', ':TagbarToggle<CR>', { silent = true })
+vim.api.nvim_set_keymap('n', '<leader>t', ':TagbarToggle<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>p', ':w !python<CR>', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>ff', '<cmd>Telescope find_files<cr>', { silent = true })
 vim.api.nvim_set_keymap('n', '<leader>fg', '<cmd>Telescope live_grep<cr>', { silent = true })
@@ -118,4 +119,4 @@ vim.g.auto_save_silent = 1
 -- Linux clipboard settings (using xclip)
 vim.cmd('set clipboard+=unnamedplus')
 
-
+-- HTML autocomplete template
