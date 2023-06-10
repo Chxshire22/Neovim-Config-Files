@@ -80,6 +80,7 @@ use {
   end,
 }
 	use 'L3MON4D3/LuaSnip'
+	use 'Exafunction/codeium.vim'
   end)
 
 -- Set colorscheme
@@ -119,4 +120,3 @@ vim.g.auto_save_silent = 1
 -- Linux clipboard settings (using xclip)
 vim.cmd('set clipboard+=unnamedplus')
 
--- HTML autocomplete template
