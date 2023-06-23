@@ -81,6 +81,11 @@ use {
 }
 	use 'L3MON4D3/LuaSnip'
 	use 'Exafunction/codeium.vim'
+	use {
+  	'prettier/vim-prettier',
+  	run = 'yarn install --frozen-lockfile'
+		}
+
   end)
 
 -- Set colorscheme
@@ -111,7 +116,7 @@ vim.g.auto_pairs_map_keys = 1
 
 -- Enable "fast wrap" feature (optional)
 vim.g.AutoPairsShortcutToggle = '<M-e>'
-vim.g.AutoPairsShortcutFastWrap = '<M-a>'
+vim.g.AutoPairsShortcutFastWrap = '<M-w>'
 
 -- Auto-save settings
 vim.g.auto_save = 1
@@ -120,3 +125,13 @@ vim.g.auto_save_silent = 1
 -- Linux clipboard settings (using xclip)
 vim.cmd('set clipboard+=unnamedplus')
 
+--prettier auto format upon save
+vim.cmd([[
+  augroup FormatOnSave
+    autocmd!
+    autocmd BufWritePre * :Prettier
+  augroup end
+]])
+
+-- prettier switch off quickfix
+vim.g['prettier#quickfix_enabled'] = 0
